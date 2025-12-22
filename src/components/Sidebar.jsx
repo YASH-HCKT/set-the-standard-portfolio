@@ -13,23 +13,19 @@ const Sidebar = () => {
 
     return (
         <motion.div
-            initial={{ x: -50, opacity: 0 }}
+            initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="fixed left-0 top-0 bottom-0 w-20 flex flex-col items-center justify-center gap-8 bg-zinc-900/10 backdrop-blur-sm z-50 border-r border-white/5"
+            className="fixed left-0 top-0 bottom-0 w-20 flex flex-col items-center justify-center gap-8 bg-background/5 backdrop-blur-xl z-50 border-r border-border"
         >
-            <div className="absolute top-8">
-                {/* Logo or initial could go here */}
-            </div>
-
             <div className="flex flex-col gap-6">
                 {icons.map((item, index) => (
                     <button
                         key={index}
-                        className="p-3 rounded-full text-zinc-500 hover:text-white hover:bg-white/10 transition-all duration-300 group relative"
+                        className="p-3 rounded-full text-muted hover:text-foreground hover:bg-accent transition-all duration-300 group relative"
                     >
                         <item.icon className="w-5 h-5" />
-                        <span className="absolute left-14 bg-zinc-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                        <span className="absolute left-14 bg-foreground text-background text-[10px] px-2 py-1 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-bold">
                             {item.label}
                         </span>
                     </button>

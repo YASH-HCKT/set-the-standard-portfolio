@@ -1,19 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const socialLinks = [
     { name: "Email", icon: Mail, url: "mailto:hello@vivek.dev", label: "hello@vivek.dev" },
     { name: "GitHub", icon: Github, url: "#", label: "github.com/vivek" },
     { name: "LinkedIn", icon: Linkedin, url: "#", label: "linkedin.com/in/vivek" },
-    // { name: "Twitter", icon: Twitter, url: "#", label: "@vivek" },
 ];
 
 const Contact = () => {
     return (
-        <section>
-            <h2 className="text-sm font-medium text-zinc-500 uppercase tracking-widest mb-8">Get in Touch</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section className="pb-40">
+            <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em] mb-12">Get in Touch</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {socialLinks.map((link, index) => (
                     <motion.a
                         key={index}
@@ -22,22 +21,22 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
-                        className="flex items-center gap-4 p-4 rounded-xl border border-zinc-900 hover:border-zinc-800 bg-zinc-900/20 hover:bg-zinc-900/40 transition-all group"
+                        className="flex flex-col gap-4 p-8 rounded-2xl border border-border bg-accent/30 hover:bg-accent transition-all group"
                     >
-                        <div className="p-2 rounded-lg bg-zinc-900 text-zinc-400 group-hover:text-white transition-colors">
-                            <link.icon className="w-5 h-5" />
+                        <div className="p-3 w-fit rounded-xl bg-background text-muted group-hover:text-foreground group-hover:scale-110 transition-all border border-border">
+                            <link.icon className="w-6 h-6" />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-xs text-zinc-500 font-medium">{link.name}</span>
-                            <span className="text-sm text-zinc-300 group-hover:text-white transition-colors">{link.label}</span>
+                            <span className="text-[10px] text-muted font-bold uppercase tracking-widest mb-1">{link.name}</span>
+                            <span className="text-lg text-foreground font-semibold break-words transition-colors">{link.label}</span>
                         </div>
                     </motion.a>
                 ))}
             </div>
 
-            <footer className="mt-24 pt-12 border-t border-zinc-900 flex justify-between items-center text-xs text-zinc-600">
+            <footer className="mt-40 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-muted font-bold uppercase tracking-[0.2em]">
                 <p>© {new Date().getFullYear()} Vivek Sharma.</p>
-                <p>Built with React & Tailwind</p>
+                <p>Built with React & Tailwind V4</p>
             </footer>
         </section>
     );
