@@ -49,7 +49,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <section className="mb-48 mt-24">
+        <section id="projects" className="mb-48 mt-24">
             <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em] mb-12">Selected Projects</h2>
             <div className="grid gap-2">
                 {projects.map((project, index) => (

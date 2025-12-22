@@ -9,7 +9,7 @@ const Hero = () => {
     const { theme } = useTheme();
 
     return (
-        <section className="min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden">
+        <section id="home" className="min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden">
             {/* Main Content Area - Left Side */}
             <div className="flex-1 flex flex-col justify-center px-12 md:pl-24 relative z-10 py-20">
 
@@ -47,12 +47,11 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                {/* Social Links */}
+                {/* Social Links sidebar */}
                 <div className="fixed bottom-12 left-12 md:left-24 flex items-center gap-6 text-muted z-20">
-                    <a href="#" className="hover:text-foreground transition-all hover:scale-110"><Twitter className="w-5 h-5" /></a>
-                    <a href="#" className="hover:text-foreground transition-all hover:scale-110"><Github className="w-5 h-5" /></a>
-                    <a href="#" className="hover:text-foreground transition-all hover:scale-110"><Linkedin className="w-5 h-5" /></a>
-                    <a href="#" className="hover:text-foreground transition-all hover:scale-110"><Mail className="w-5 h-5" /></a>
+                    <a href="https://github.com/codes-viveksharma" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all hover:scale-110"><Github className="w-5 h-5" /></a>
+                    <a href="https://www.linkedin.com/in/viveksharma262005/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all hover:scale-110"><Linkedin className="w-5 h-5" /></a>
+                    <a href="mailto:codes.viveksharma@gmail.com" className="hover:text-foreground transition-all hover:scale-110"><Mail className="w-5 h-5" /></a>
                 </div>
             </div>
 
@@ -83,6 +82,9 @@ const Hero = () => {
                     className={`w-full h-full object-cover object-top transition-all duration-1000 ${theme === 'dark' ? 'grayscale opacity-80' : 'opacity-90'}`}
                 />
             </motion.div>
+
+            {/* Hidden ID for About section jump if needed */}
+            <div id="about" className="absolute bottom-0"></div>
         </section>
     );
 };

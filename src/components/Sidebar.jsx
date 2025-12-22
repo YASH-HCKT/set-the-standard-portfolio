@@ -4,12 +4,22 @@ import { Home, User, FolderGit2, Mail, Layers } from 'lucide-react';
 
 const Sidebar = () => {
     const icons = [
-        { icon: Home, label: "Home" },
-        { icon: User, label: "About" },
-        { icon: FolderGit2, label: "Projects" },
-        { icon: Layers, label: "Services" },
-        { icon: Mail, label: "Contact" },
+        { icon: Home, label: "Home", href: "#home" },
+        { icon: User, label: "About", href: "#about" },
+        { icon: FolderGit2, label: "Projects", href: "#projects" },
+        { icon: Layers, label: "Services", href: "#" },
+        { icon: Mail, label: "Contact", href: "#contact" },
     ];
+
+    const handleScroll = (e, href) => {
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     return (
         <motion.div
@@ -20,15 +30,17 @@ const Sidebar = () => {
         >
             <div className="flex flex-col gap-6">
                 {icons.map((item, index) => (
-                    <button
+                    <a
                         key={index}
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item.href)}
                         className="p-3 rounded-full text-muted hover:text-foreground hover:bg-accent transition-all duration-300 group relative"
                     >
                         <item.icon className="w-5 h-5" />
-                        <span className="absolute left-14 bg-foreground text-background text-[10px] px-2 py-1 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-bold">
+                        <span className="absolute left-14 bg-foreground text-background text-[10px] px-2 py-1 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-bold shadow-lg">
                             {item.label}
                         </span>
-                    </button>
+                    </a>
                 ))}
             </div>
         </motion.div>
