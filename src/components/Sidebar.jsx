@@ -26,7 +26,7 @@ const Sidebar = () => {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="fixed left-0 top-0 bottom-0 w-20 flex flex-col items-center justify-center gap-8 bg-background/5 backdrop-blur-xl z-50 border-r border-border"
+            className="fixed left-0 top-0 bottom-0 w-20 hidden md:flex flex-col items-center justify-center gap-8 bg-background/5 backdrop-blur-xl z-50 border-r border-border"
         >
             <div className="flex flex-col gap-6">
                 {icons.map((item, index) => (

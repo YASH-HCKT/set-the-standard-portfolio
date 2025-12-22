@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
                 {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
 
-            <main className="flex-1 ml-20 min-h-screen flex flex-col relative w-full overflow-x-hidden">
+            <main className="flex-1 ml-0 md:ml-20 min-h-screen flex flex-col relative w-full overflow-x-hidden">
                 {children}
             </main>
         </div>

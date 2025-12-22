@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import TypedText from './TypedText';
 import { useTheme } from '../context/ThemeContext';
 
@@ -9,21 +9,21 @@ const Hero = () => {
     const { theme } = useTheme();
 
     return (
-        <section id="home" className="min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden">
+        <section id="home" className="min-h-screen w-full flex flex-col md:flex-row relative overflow-hidden bg-background">
             {/* Main Content Area - Left Side */}
-            <div className="flex-1 flex flex-col justify-center px-12 md:pl-24 relative z-10 py-20">
+            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 md:pl-24 relative z-10 py-20 pb-32 md:py-20">
 
                 {/* 1. Introductory Section (Top/Middle) */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="mb-32"
+                    className="mb-20 md:mb-32"
                 >
-                    <h2 className="text-xl md:text-2xl font-light text-muted tracking-widest uppercase mb-4">
+                    <h2 className="text-lg md:text-2xl font-light text-muted tracking-widest uppercase mb-4">
                         Vivek Sharma
                     </h2>
-                    <div className="text-3xl md:text-5xl text-foreground font-bold flex items-center gap-3">
+                    <div className="text-2xl md:text-5xl text-foreground font-bold flex flex-wrap items-center gap-3">
                         <span className="text-muted font-light italic">I'm</span>
                         <TypedText words={roles} />
                     </div>
@@ -36,7 +36,7 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="mt-12 group"
                 >
-                    <h1 className="text-6xl md:text-[8rem] font-black text-foreground leading-[0.9] tracking-tighter uppercase mb-12">
+                    <h1 className="text-4xl sm:text-5xl md:text-[8rem] font-black text-foreground leading-[0.9] tracking-tighter uppercase mb-8 md:mb-12">
                         SET THE <br />
                         <span className="text-muted opacity-30 group-hover:opacity-60 transition-opacity duration-500">STANDARD.</span>
                     </h1>
@@ -47,8 +47,8 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                {/* Social Links sidebar */}
-                <div className="fixed bottom-12 left-12 md:left-24 flex items-center gap-6 text-muted z-20">
+                {/* Social Links sidebar - adjusted for mobile */}
+                <div className="fixed bottom-8 left-6 md:bottom-12 md:left-24 flex items-center gap-6 text-muted z-20">
                     <a href="https://github.com/codes-viveksharma" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all hover:scale-110"><Github className="w-5 h-5" /></a>
                     <a href="https://www.linkedin.com/in/viveksharma262005/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all hover:scale-110"><Linkedin className="w-5 h-5" /></a>
                     <a href="mailto:codes.viveksharma@gmail.com" className="hover:text-foreground transition-all hover:scale-110"><Mail className="w-5 h-5" /></a>
@@ -60,7 +60,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
-                className="flex-1 relative h-[50vh] md:h-screen"
+                className="flex-1 relative h-[40vh] md:h-screen"
             >
                 {/* Gradients to blend image into the background */}
                 <div
