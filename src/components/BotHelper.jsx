@@ -24,7 +24,7 @@ const BotHelper = () => {
     ];
 
     return (
-        <div className="fixed bottom-28 right-4 md:bottom-8 md:right-8 z-[60] flex flex-col items-end gap-4">
+        <div className="fixed bottom-44 right-4 md:bottom-8 md:right-8 z-[60] flex flex-col items-end gap-4">
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
