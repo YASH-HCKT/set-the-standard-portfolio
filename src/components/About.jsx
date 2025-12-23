@@ -18,7 +18,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row gap-16 items-start">
-                <div className="flex-1 space-y-8">
+                <div className="flex-1 space-y-8 min-w-0">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const About = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 leading-none">
                         {details.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -44,14 +44,14 @@ const About = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="flex items-center gap-5 p-8 rounded-[2rem] bg-background/50 backdrop-blur-md border border-border/50 hover:bg-accent/40 hover:border-violet-500/30 transition-all group"
+                                className={`flex items-center gap-5 p-6 rounded-[2rem] bg-background/50 backdrop-blur-md border border-border/50 hover:bg-accent/40 hover:border-violet-500/30 transition-all group ${item.label === 'Email' ? 'sm:col-span-2 min-w-0' : ''}`}
                             >
-                                <div className="p-4 rounded-2xl bg-accent text-violet-500 group-hover:bg-violet-500 group-hover:text-background transition-all duration-500">
+                                <div className="p-4 rounded-2xl bg-accent text-violet-500 group-hover:bg-violet-500 group-hover:text-background transition-all duration-500 shrink-0">
                                     <item.icon className="w-6 h-6" />
                                 </div>
-                                <div>
+                                <div className="min-w-0 overflow-hidden flex-1">
                                     <p className="text-[10px] text-muted font-black uppercase tracking-[0.3em] mb-1">{item.label}</p>
-                                    <p className="text-base font-black text-foreground">{item.value}</p>
+                                    <p className="text-base font-black text-foreground truncate" title={item.value}>{item.value}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -59,18 +59,16 @@ const About = () => {
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="w-full lg:w-1/3 aspect-[4/5] rounded-[3.5rem] bg-gradient-to-b from-violet-500 to-indigo-600 p-1.5 border border-border/50 group shadow-2xl transition-all duration-1000 hover:scale-[1.02]"
+                    className="w-full lg:w-1/3 aspect-[4/5] rounded-[3.5rem] overflow-hidden border border-border/50 group shadow-2xl transition-all duration-1000 hover:scale-[1.02]"
                 >
-                    <div className="w-full h-full rounded-[3.2rem] overflow-hidden">
-                        <img
-                            src="/old_portfolio_pic.jpg"
-                            alt="Vivek Sharma"
-                            className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
-                        />
-                    </div>
+                    <img
+                        src="/old_portfolio_pic.jpg"
+                        alt="Vivek Sharma"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                    />
                 </motion.div>
             </div>
         </section>
