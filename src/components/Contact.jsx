@@ -12,7 +12,7 @@ const contactInfo = [
 
 const Contact = () => {
     return (
-        <section id="contact" className="pb-40 pt-20">
+        <section id="contact" className="pb-56 md:pb-40 pt-20">
             <div className="flex flex-col gap-2 mb-12">
                 <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em]">Get in Touch</h2>
                 <p className="text-4xl font-bold text-foreground tracking-tighter">Let's build something together.</p>
