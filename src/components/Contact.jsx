@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin, Phone, MapPin, Send, ExternalLink } from 'lucid
 const contactInfo = [
     { name: "Email", icon: Mail, url: "mailto:codes.viveksharma@gmail.com", label: "codes.viveksharma@gmail.com" },
     { name: "Phone", icon: Phone, url: "tel:+917006356523", label: "+91 70063 56523" },
-    { name: "Location", icon: MapPin, url: "#", label: "Asansol, West Bengal, India" },
+    { name: "Location", icon: MapPin, url: "#", label: "Jammu, Jammu & Kashmir, India" },
     { name: "GitHub", icon: Github, url: "https://github.com/codes-viveksharma", label: "github.com/codes-viveksharma" },
     { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/viveksharma262005/", label: "linkedin.com/in/viveksharma262005" },
 ];
@@ -74,7 +74,7 @@ const Contact = () => {
 
                     <div className="flex items-center gap-2 mt-4 text-[10px] font-bold uppercase tracking-widest opacity-60">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                        Fast response guaranteed
+                        
                     </div>
                 </div>
             </motion.div>
