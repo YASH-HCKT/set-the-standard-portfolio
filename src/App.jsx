@@ -12,7 +12,7 @@ function App() {
   return (
     <Layout>
       <Hero />
-      <div className="px-12 md:pl-24 max-w-6xl">
+      <div className="px-6 sm:px-12 md:pl-24 max-w-6xl">
         <About />
         <Education />
         <Skills />

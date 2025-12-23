@@ -43,34 +43,34 @@ const ProjectCard = ({ project, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`group relative flex flex-col lg:flex-row gap-10 p-8 md:p-12 mb-12 rounded-[3.5rem] bg-gradient-to-br ${project.color} border border-border shadow-2xl shadow-transparent ${project.border} transition-all duration-700 overflow-hidden`}
+            className={`group relative flex flex-col lg:flex-row gap-8 md:gap-10 p-6 md:p-12 mb-0 md:mb-12 rounded-3xl md:rounded-[3.5rem] bg-gradient-to-br ${project.color} border border-border shadow-2xl shadow-transparent ${project.border} transition-all duration-700 overflow-hidden`}
         >
             {/* Background Glow */}
             <div className={`absolute -right-20 -top-20 w-80 h-80 bg-gradient-to-br ${project.color} blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000`}></div>
 
             <div className="flex-1 flex flex-col justify-between z-10 relative">
                 <div>
-                    <div className="flex justify-between items-start mb-6">
-                        <h3 className="text-3xl font-black text-foreground tracking-tight leading-none">
+                    <div className="flex justify-between items-start mb-4 md:mb-6">
+                        <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight leading-tight">
                             {project.title}
                         </h3>
-                        <ArrowUpRight className={`w-6 h-6 ${project.accent} opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500`} />
+                        <ArrowUpRight className={`w-5 h-5 md:w-6 md:h-6 ${project.accent} opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500 shrink-0`} />
                     </div>
-                    <p className="text-lg text-muted/90 font-medium leading-relaxed mb-10 max-w-lg">
+                    <p className="text-base md:text-lg text-muted/90 font-medium leading-relaxed mb-8 md:mb-10 max-w-lg">
                         {project.description}
                     </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2 md:gap-2.5">
                     {project.tech.map((t) => (
-                        <span key={t} className="text-[10px] font-black px-4 py-2 rounded-xl bg-background/50 border border-border text-foreground uppercase tracking-widest backdrop-blur-sm shadow-sm">
+                        <span key={t} className="text-[9px] md:text-[10px] font-black px-3 py-1.5 md:px-4 md:py-2 rounded-lg md:rounded-xl bg-background/50 border border-border text-foreground uppercase tracking-widest backdrop-blur-sm shadow-sm">
                             {t}
                         </span>
                     ))}
                 </div>
             </div>
 
-            <div className="lg:w-1/2 aspect-video lg:aspect-auto h-64 lg:h-80 rounded-[2.5rem] overflow-hidden border border-border/50 shadow-2xl group-hover:border-border transition-all duration-1000 z-10">
+            <div className="lg:w-1/2 aspect-video lg:aspect-auto h-56 md:h-64 lg:h-80 rounded-2xl md:rounded-[2.5rem] overflow-hidden border border-border/50 shadow-2xl group-hover:border-border transition-all duration-1000 z-10">
                 <img
                     src={project.image}
                     alt={project.title}
@@ -83,12 +83,12 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <section id="projects" className="mb-48 mt-24">
-            <div className="flex flex-col gap-2 mb-20 px-2">
-                <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em]">Selected Works</h2>
-                <p className="text-5xl font-black text-foreground tracking-tighter">Case Studies</p>
+        <section id="projects" className="mb-24 md:mb-48 mt-12 md:mt-24">
+            <div className="flex flex-col gap-2 mb-12 md:mb-20 px-2">
+                <h2 className="text-[10px] md:text-xs font-bold text-muted uppercase tracking-[0.5em]">Selected Works</h2>
+                <p className="text-3xl md:text-5xl font-black text-foreground tracking-tighter">Case Studies</p>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-6">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project} index={index} />
                 ))}
