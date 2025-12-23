@@ -17,7 +17,7 @@ const skillsData = [
         color: "from-emerald-500/20 to-emerald-500/5",
         accent: "text-emerald-500",
         border: "hover:border-emerald-500/50",
-        skills: ["Node.js", "Express.js", "MongoDB", "MySQL"]
+        skills: ["Node.js", "Express.js", "MongoDB"]
     },
     {
         category: "Tools & Others",
@@ -25,7 +25,7 @@ const skillsData = [
         color: "from-amber-500/20 to-amber-500/5",
         accent: "text-amber-500",
         border: "hover:border-amber-500/50",
-        skills: ["Git", "GitHub", "Figma", "Postman", "Vite"]
+        skills: ["Git", "GitHub", "Render", "Vercel", "Vite", "Arduino"]
     }
 ];
 
