@@ -65,7 +65,7 @@ const About = () => {
                     className="w-full lg:w-1/3 aspect-[4/5] rounded-[3rem] bg-accent overflow-hidden border border-border group"
                 >
                     <img
-                        src="/profile.jpg"
+                        src="/old_portfolio_pic.jpg"
                         alt="Vivek Sharma"
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     />
