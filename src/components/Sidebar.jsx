@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, User, FolderGit2, Mail, Layers } from 'lucide-react';
+import { Home, User, FolderGit2, Mail, Code2 } from 'lucide-react';
 
 const Sidebar = () => {
     const icons = [
         { icon: Home, label: "Home", href: "#home" },
         { icon: User, label: "About", href: "#about" },
+        { icon: Code2, label: "Skills", href: "#skills" },
         { icon: FolderGit2, label: "Projects", href: "#projects" },
-        { icon: Layers, label: "Services", href: "#" },
         { icon: Mail, label: "Get in Touch", href: "#contact" },
     ];
 

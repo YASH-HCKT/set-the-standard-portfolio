@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, ArrowUp, FolderGit2, Mail, HelpCircle } from 'lucide-react';
+import { MessageSquare, X, ArrowUp, FolderGit2, Mail, HelpCircle, User, GraduationCap, Code2 } from 'lucide-react';
 
 const BotHelper = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +14,12 @@ const BotHelper = () => {
     };
 
     const actions = [
+        { icon: User, label: "Tell me about yourself", action: () => scrollTo('about') },
+        { icon: GraduationCap, label: "What is your education?", action: () => scrollTo('education') },
+        { icon: Code2, label: "What are your skills?", action: () => scrollTo('skills') },
         { icon: FolderGit2, label: "Can I see your work?", action: () => scrollTo('projects') },
         { icon: Mail, label: "How do I reach you?", action: () => scrollTo('contact') },
         { icon: MessageSquare, label: "I want to send a message", action: () => window.location.href = 'mailto:codes.viveksharma@gmail.com' },
-        { icon: HelpCircle, label: "What do you specialize in?", action: () => scrollTo('projects') },
         { icon: ArrowUp, label: "Take me back to the top", action: () => scrollTo('home') },
     ];
 

@@ -4,16 +4,22 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
     {
-        title: "Flight Booking Engine",
-        description: "A comprehensive flight search and booking platform built with React and modern booking flows.",
-        tech: ["React", "Vite", "Tailwind"],
-        link: "#"
+        title: "E-commerce Platform",
+        description: "Full-stack e-commerce website with cart, payment integration, and admin panel.",
+        tech: ["React", "Node.js", "MongoDB"],
+        link: "https://github.com/codes-viveksharma/ecommerce-platform"
     },
     {
-        title: "E-Commerce Dashboard",
-        description: "Real-time analytics dashboard for online retailers featuring data visualization.",
-        tech: ["Next.js", "Recharts", "Prisma"],
-        link: "#"
+        title: "Task Manager App",
+        description: "Real-time task management application with drag & drop functionality using modern frameworks.",
+        tech: ["Vue.js", "Express", "Socket.io"],
+        link: "https://github.com/codes-viveksharma/task-manager"
+    },
+    {
+        title: "Weather Dashboard",
+        description: "Weather forecasting application with location detection and dynamic data visualization.",
+        tech: ["JavaScript", "API Integration", "Chart.js"],
+        link: "https://github.com/codes-viveksharma/weather-dashboard"
     }
 ];
 
