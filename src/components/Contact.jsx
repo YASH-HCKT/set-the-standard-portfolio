@@ -15,13 +15,11 @@ const Contact = () => {
     return (
         <section id="contact" className="pb-40 pt-20">
             <div className="flex flex-col gap-2 mb-12">
-                <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em]">Contact</h2>
+                <h2 className="text-xs font-bold text-muted uppercase tracking-[0.5em]">Get in Touch</h2>
                 <p className="text-4xl font-bold text-foreground tracking-tighter">Let's build something together.</p>
             </div>
 
-            <ContactForm />
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
                 {contactInfo.map((link, index) => (
                     <motion.a
                         key={index}
@@ -44,6 +42,11 @@ const Contact = () => {
                     </motion.a>
                 ))}
             </div>
+
+            <div className="flex flex-col gap-2 mb-12">
+                <h2 className="text-[10px] font-bold text-muted uppercase tracking-[0.4em]">Send a Message</h2>
+            </div>
+            <ContactForm />
 
             <footer className="mt-40 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-muted font-bold uppercase tracking-[0.2em]">
                 <p>© {new Date().getFullYear()} Vivek Sharma.</p>

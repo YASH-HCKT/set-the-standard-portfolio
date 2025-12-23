@@ -8,7 +8,7 @@ const Sidebar = () => {
         { icon: User, label: "About", href: "#about" },
         { icon: FolderGit2, label: "Projects", href: "#projects" },
         { icon: Layers, label: "Services", href: "#" },
-        { icon: Mail, label: "Contact", href: "#contact" },
+        { icon: Mail, label: "Get in Touch", href: "#contact" },
     ];
 
     const handleScroll = (e, href) => {

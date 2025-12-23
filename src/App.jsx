@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import BotHelper from './components/BotHelper';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Projects />
         <Contact />
       </div>
+      <BotHelper />
     </Layout>
   );
 }
