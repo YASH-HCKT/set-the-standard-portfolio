@@ -27,7 +27,7 @@ const educationData = [
         period: "2024 - 2028",
         title: "Bachelor of Technology in Computer Science",
         institution: "Asansol Engineering College",
-        details: "Specialized in Web Development | Passing Year:- 2028",
+        details: "Specialized in Web Development | Passing Year: 2028",
         icon: GraduationCap,
         color: "from-purple-500/20 to-transparent",
         accent: "text-purple-500",
