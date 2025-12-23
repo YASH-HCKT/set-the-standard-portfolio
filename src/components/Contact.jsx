@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Phone, MapPin } from 'lucide-react';
-import ContactForm from './ContactForm';
+import { Mail, Github, Linkedin, Phone, MapPin, Send, ExternalLink } from 'lucide-react';
 
 const contactInfo = [
     { name: "Email", icon: Mail, url: "mailto:codes.viveksharma@gmail.com", label: "codes.viveksharma@gmail.com" },
@@ -43,10 +42,42 @@ const Contact = () => {
                 ))}
             </div>
 
-            <div className="flex flex-col gap-2 mb-12">
-                <h2 className="text-[10px] font-bold text-muted uppercase tracking-[0.4em]">Send a Message</h2>
-            </div>
-            <ContactForm />
+            {/* Direct Email CTA */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden p-12 md:p-20 rounded-[3rem] border border-border bg-foreground text-background"
+            >
+                {/* Background Decorations */}
+                <div className="absolute top-0 right-0 p-10 opacity-10">
+                    <Mail className="w-60 h-60" />
+                </div>
+
+                <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto gap-8">
+                    <div className="flex flex-col gap-4">
+                        <span className="text-xs font-bold uppercase tracking-[0.4em] opacity-60">Ready to start?</span>
+                        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Send me an email directly.</h2>
+                    </div>
+
+                    <p className="text-lg opacity-80 leading-relaxed text-balance">
+                        Whether you have a specific project in mind or just want to chat about technology, my inbox is always open.
+                    </p>
+
+                    <a
+                        href="mailto:codes.viveksharma@gmail.com"
+                        className="group flex items-center gap-4 px-10 py-5 bg-background text-foreground rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl"
+                    >
+                        Contact Me
+                        <Send className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
+
+                    <div className="flex items-center gap-2 mt-4 text-[10px] font-bold uppercase tracking-widest opacity-60">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        Fast response guaranteed
+                    </div>
+                </div>
+            </motion.div>
 
             <footer className="mt-40 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-muted font-bold uppercase tracking-[0.2em]">
                 <p>© {new Date().getFullYear()} Vivek Sharma.</p>

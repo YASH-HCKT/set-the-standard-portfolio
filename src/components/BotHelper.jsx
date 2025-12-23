@@ -16,7 +16,7 @@ const BotHelper = () => {
     const actions = [
         { icon: FolderGit2, label: "Can I see your work?", action: () => scrollTo('projects') },
         { icon: Mail, label: "How do I reach you?", action: () => scrollTo('contact') },
-        { icon: MessageSquare, label: "I want to send a message", action: () => scrollTo('contact') },
+        { icon: MessageSquare, label: "I want to send a message", action: () => window.location.href = 'mailto:codes.viveksharma@gmail.com' },
         { icon: HelpCircle, label: "What do you specialize in?", action: () => scrollTo('projects') },
         { icon: ArrowUp, label: "Take me back to the top", action: () => scrollTo('home') },
     ];
