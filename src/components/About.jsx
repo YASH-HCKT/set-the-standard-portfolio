@@ -67,7 +67,7 @@ const About = () => {
                     <img
                         src="/old_portfolio_pic.jpg"
                         alt="Vivek Sharma"
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        className="w-full h-full object-cover transition-all duration-700"
                     />
                 </motion.div>
             </div>
