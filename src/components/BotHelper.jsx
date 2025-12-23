@@ -24,7 +24,7 @@ const BotHelper = () => {
     ];
 
     return (
-        <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[60] flex flex-col items-end gap-2 md:gap-4">
+        <div className="fixed bottom-28 right-4 md:bottom-8 md:right-8 z-[60] flex flex-col items-end gap-4">
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -77,10 +77,10 @@ const BotHelper = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-3 md:p-4 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-accent text-foreground' : 'bg-foreground text-background'
+                className={`p-4 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-accent text-foreground' : 'bg-foreground text-background'
                     }`}
             >
-                {isOpen ? <HelpCircle className="w-5 h-5 md:w-6 md:h-6" /> : <MessageSquare className="w-5 h-5 md:w-6 md:h-6" />}
+                {isOpen ? <HelpCircle className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
                 {!isOpen && (
                     <span className="absolute -top-1 -right-1 flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-muted opacity-75"></span>
