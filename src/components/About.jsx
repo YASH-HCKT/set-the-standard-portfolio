@@ -6,7 +6,7 @@ const About = () => {
     const details = [
         { icon: User, label: "Name", value: "Vivek Sharma" },
         { icon: Mail, label: "Email", value: "codes.viveksharma@gmail.com" },
-        { icon: MapPin, label: "Location", value: "Asansol, West Bengal, India" },
+        { icon: MapPin, label: "Location", value: "Jammu, Jammu & Kashmir, India" },
         { icon: Calendar, label: "Experience", value: "2+ Years" },
     ];
 
