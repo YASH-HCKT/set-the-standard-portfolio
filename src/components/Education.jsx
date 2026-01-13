@@ -6,7 +6,7 @@ const educationData = [
     {
         period: "2019 - 2022",
         title: "Secondary Education",
-        institution: "SP Smart Schools",
+        institution: "TAGORE MEMORIAL HIGHER SECONDARY SCHOOL",
         details: "Percentage: 93% | Board: J&K Board",
         icon: School,
         color: "from-blue-500/20 to-transparent",
